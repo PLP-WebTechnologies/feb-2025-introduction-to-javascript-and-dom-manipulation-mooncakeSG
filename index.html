@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            transition: background-color 0.5s ease;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .control-panel {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        button {
+            padding: 10px 15px;
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        button:hover {
+            background-color: #3367d6;
+        }
+        
+        .content-box {
+            min-height: 100px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript DOM Manipulation Demo</h1>
+        <p>Interact with the buttons below to see how JavaScript can modify the webpage dynamically.</p>
+    </header>
+    
+    <main>
+        <section id="controls">
+            <h2>Control Panel</h2>
+            <div class="control-panel">
+                <button id="changeTextBtn">Change Text</button>
+                <button id="toggleStyleBtn">Toggle Style</button>
+                <button id="addElementBtn">Add Element</button>
+                <button id="removeElementBtn">Remove Element</button>
+                <button id="changeBgBtn">Change Background</button>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Content Area</h2>
+            <p id="dynamicText">This text will change when you click the "Change Text" button.</p>
+            <div id="contentBox" class="content-box">
+                <p>This is a content box that will be modified by JavaScript.</p>
+            </div>
+        </section>
+        
+        <section id="elementSection">
+            <h2>Dynamic Elements</h2>
+            <p>Elements will be added or removed here.</p>
+            <div id="elementsContainer"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>This demo showcases basic DOM manipulation with JavaScript.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
